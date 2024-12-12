@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deadlock - Agen Valorant</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+ margin: 0;
+ padding: 0;
+ font-family: Arial, sans-serif;
+ color: white;
+ background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+url('https://tse1.mm.bing.net/th?id=OIP.WBwyKa_eFtjxWtznubstvAHaEK&pid=Api&P=0&h=180');
+ background-size: cover;
+background-position: center;
+}
+
+header nav ul {
+ display: flex;
+ list-style-type: none;
+ background-color: rgba(0, 0, 0, 0.8);
+ padding: 10px;
+}
+
+header nav ul li {
+ margin-right: 20px;
+}
+
+header nav ul li a {
+ text-decoration: none;
+ color: white;
+}
+
+.content {
+ padding: 20px;
+ text-align: center;
+ background-color: rgba(0, 0, 0, 0.5);
+ border-radius: 10px;
+ display: inline-block;
+}
+
+.video-container {
+ margin-top: 20px;
+}
+
+iframe {
+ width: 100%;
+ max-width: 560px;
+ height: 315px;
+ border-radius: 10px;
+}
+
+.skills-list li {
+ cursor: pointer;
+ padding: 10px;
+ margin-bottom: 5px;
+ background-color: #f1f1f1;
+ border-radius: 5px;
+ color: black;
+}
+
+.skills-list li:hover {
+ background-color: #ddd;
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+ <ul>
+ <li><a href="index.html">Beranda</a></li>
+ <li><a href="about.html">Tentang Kami</a></li>
+ <li><a href="events.html">Event Komunitas</a></li>
+ <li><a href="contact.html">Kontak</a></li>
+ <li><a href="agents.html">Agen Valorant</a></li>
+ </ul>
+</nav>
+</header>
+
+<section class="content">
+<h1>Deadlock - Sentinel</h1>
+<img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/477284dfe402a85abcf6b07512bcd6f01c8fe60e-616x822.png?auto=format&fit=fill&q=80&w=415" alt="Deadlock" class="agent-image">
+<p>Deadlock adalah agen sentinel yang ahli dalam mengendalikan area dan memerangkap musuh. Dengan teknologi canggihnya, dia mampu menghentikan pergerakan musuh secara efektif.</p>
+
+<h2>Kemampuan Deadlock</h2>
+<ul class="skills-list">
+ <li onclick="showVideo('gravnet')"><strong>GravNet:</strong> Lemparkan jaring yang membuat musuh bergerak lebih lambat.</li>
+ <li onclick="showVideo('sonicSensor')"><strong>Sonic Sensor:</strong> Perangkat yang mendeteksi suara langkah dan meledak.</li>
+ <li onclick="showVideo('barrierMesh')"><strong>Barrier Mesh:</strong> Menciptakan penghalang yang memblokir jalur musuh.</li>
+ <li onclick="showVideo('anomaly')"><strong>Anomaly:</strong> Menjebak musuh dalam energi gravitasi.</li>
+</ul>
+
+<div class="video-container">
+ <iframe id="skillVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</section>
+
+<script>
+function showVideo(skill) {
+ var videoUrl = '';
+ if (skill === 'gravnet') {
+ videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/d7576f43161214699762f1858e2fc8e2d3112077.mp4';
+ } else if (skill === 'sonicSensor') {
+ videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/e2c77e5b49fc3b53a7c625eb7646e51e7094dc52.mp4';
+ } else if (skill === 'barrierMesh') {
+ videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/a9dc93d62c1ae6c51b12ed1e84a5d96c678677f9.mp4';
+ } else if (skill === 'anomaly') {
+ videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/b995bab386bd58541eacfe0e065a808081c0b9ea.mp4';
+ }
+ document.getElementById('skillVideo').src = videoUrl;
+}
+</script>
+
+</body>
+</html>

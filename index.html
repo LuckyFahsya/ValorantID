@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komunitas Pecinta Valorant</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Tambahan CSS untuk slider */
+    .slider {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .testimonials {
+      background-color: #ff4655;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center; /* Menambahkan teks agar berada di tengah */
+    }
+
+    .statistic {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+
+    .statistic div {
+      text-align: center;
+      background-color: #ff4655;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="events.html">Event Komunitas</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="agents.html">Agen Valorant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Selamat Datang di Komunitas Games Valorant</h1>
+    <p>Bergabunglah bersama kami dan temukan teman baru untuk bermain Valorant!</p>
+  </section>
+
+  <!-- Testimoni -->
+  <div class="testimonials">
+    <h2>Apa Kata Mereka?</h2>
+    <p>"Komunitas ini sangat membantu saya untuk meningkatkan keterampilan bermain Valorant!" - <strong>Lucky</strong></p>
+    <p>"Saya menemukan banyak teman baru di sini, sangat menyenangkan!" - <strong>Bintang</strong></p>
+  </div>
+
+  <!-- Slider Gambar -->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide"><img src="https://media.hitekno.com/thumbs/2022/04/25/46835-komunitas-valorant-indonesia-berdonasi-melalui-ramadan-charity-clutch/730x480-img-46835-komunitas-valorant-indonesia-berdonasi-melalui-ramadan-charity-clutch.jpg" alt="Image 1" style="width:100%"></div>
+      <div class="slide"><img src="https://i.ytimg.com/vi/ZMkIMSH5id0/maxresdefault.jpg" alt="Image 2" style="width:100%"></div>
+      <div class="slide"><img src="https://i.ytimg.com/vi/VeROvgPza08/maxresdefault.jpg" alt="Image 3" style="width:100%"></div>
+    </div>
+  </div>
+
+  <!-- Statistik Komunitas -->
+  <div class="statistic">
+    <div>
+      <h3>100+</h3>
+      <p>Anggota</p>
+    </div>
+    <div>
+      <h3>20+</h3>
+      <p>Event Diselenggarakan</p>
+    </div>
+    <div>
+      <h3>50+</h3>
+      <p>Testimoni Positif</p>
+    </div>
+  </div>0
+
+  <!-- Link ke Media Sosial -->
+  <!-- Link ke Media Sosial -->
+<div class="social-icons">
+  <h2>Ikuti Kami di Media Sosial</h2>
+  <a href="https://www.facebook.com/VALORANTid/" target="_blank">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.55DCXbXlKDgEBoZhKxpzLAHaHa&pid=Api&P=0&h=180" alt="Facebook" style="width: 40px; height: 40px;">
+  </a>
+  <a href="https://www.instagram.com/valorantid/" target="_blank">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.0NT6jOhkX2RXKK9Hx0n1DAHaFb&pid=Api&P=0&h=180" alt="Instagram" style="width: 40px; height: 40px;">
+  </a>
+  <a href="https://x.com/ValorLeaks" target="_blank">
+      <img src="https://tse1.mm.bing.net/th?id=OIP._91-ONOqHz5WXN0Embn5ogHaHa&pid=Api&P=0&h=180" alt="Twitter" style="width: 40px; height: 40px;">
+  </a>
+  <a href="https://discord.gg/X74Dnjnt" target="_blank">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.41AGKMcYbAcvIOP2sLPL1AHaEK&pid=Api&P=0&h=180" alt="Discord" style="width: 40px; height: 40px;">
+  </a>
+</div>
+
+  <script>
+    // Script untuk slider gambar
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 3000); // Ganti slide setiap 3 detik
+    showSlide(currentIndex); // Tampilkan slide pertama
+  </script>
+
+  <footer>
+    <p>&copy; 2024 Komunitas Pecinta Valorant. Semua hak dilindungi.</p>
+  </footer>
+</body>
+</html>

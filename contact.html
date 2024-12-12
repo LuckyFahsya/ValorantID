@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Komunitas Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
+    <script>
+        // Inisialisasi EmailJS
+        emailjs.init("19_77jSROwgAiDod4");
+
+        function sendEmail(event) {
+    event.preventDefault(); // Mencegah reload halaman
+    console.log("Form submitted"); // Debugging: Formulir dikirim
+
+    const form = document.getElementById('contactForm');
+    const formData = new FormData(form);
+    
+    // Kirim email ke pengguna
+    emailjs.send('service_6pl5w28', 'template_92v01vh', {
+        name: formData.get('name'),
+        email: formData.get('email'),
+    })
+    .then(function() {
+        // Ambil nilai dari form untuk pengalihan
+        const name = encodeURIComponent(formData.get('name'));
+        const email = encodeURIComponent(formData.get('email'));
+
+        // Log untuk debugging
+        console.log("Redirecting to thankyou.html with:", { name, email });
+
+        // Arahkan ke thankyou.html
+        window.location.href = `thankyou.html?name=${name}&email=${email}`;
+    }, function(error) {
+        console.error('Error:', error); // Debugging jika gagal
+        alert('Gagal mengirim pesan: ' + JSON.stringify(error)); // Tampilkan kesalahan
+    });
+}
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Kontak Kami</h1>
+        <p>Jika ingin bergabung atau bertanya lebih lanjut mengenai komunitas kami, silakan hubungi kami melalui form di bawah ini:</p>
+
+        <form id="contactForm" onsubmit="sendEmail(event)">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Pesan:</label>
+            <textarea id="messageInput" name="message" required></textarea>
+        
+            <input type="submit" value="Kirim">
+        </form>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Komunitas Valorant Indonesia. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoru - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk background dengan gambar transparan */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://tse4.mm.bing.net/th?id=OIP.U9L2q8qPRMkETC2h9lHlXAHaEk&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Tambahkan latar belakang semi-transparan untuk kontras */
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Yoru - Duelist</h1>
+        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/05e1a996814dd10d7179efee327d29a7be00e912-616x822.png?auto=format&fit=fill&q=80&w=415" alt="Yoru" class="agent-image">
+        <p>Yoru adalah seorang duelist yang mampu menciptakan ilusi dan mengelabui musuh dengan kemampuan teleportasinya.</p>
+
+        <h2>Kemampuan Yoru</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('gatecrash')"><strong>Gatecrash:</strong> Teleportasi ke lokasi yang ditentukan, memungkinkan Yoru untuk mengelabui musuh.</li>
+            <li onclick="showVideo('blindside')"><strong>Blindside:</strong> Melemparkan bola yang membutakan musuh yang melihat ke arahnya.</li>
+            <li onclick="showVideo('dimensionalrift')"><strong>Dimensional Rift:</strong> Menghilang dari pandangan musuh dan bergerak dengan cepat ke lokasi lain.</li>
+            <li onclick="showVideo('ultimate')"><strong>Ultimate - From the Shadows:</strong> Menggunakan kemampuan untuk mengirimkan ilusi ke lokasi yang ditentukan, mengelabui musuh.</li>
+        </ul>
+
+        <div class="video-container">
+            <iframe id="skillVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        // Fungsi untuk menampilkan video berdasarkan skill yang diklik
+        function showVideo(skill) {
+            var videoUrl = '';
+            
+            // Ganti URL video sesuai dengan skill yang dipilih
+            switch(skill) {
+                case 'gatecrash':
+                    videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/be352287c5704d82d1acbff5ecdee5187755d235.mp4';
+                    break;
+                case 'blindside':
+                    videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/295ab26ef6097d28da0bef9c9b4c6185a80071c8.mp4';
+                    break;
+                case 'dimensionalrift':
+                    videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/ef008c8e848a054f88e88f173c03279a45a1c796.mp4';
+                    break;
+                case 'ultimate':
+                    videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/9ca7fac6ec9514fa06b9785aad2ead0c3fba0eec.mp4';
+                    break;
+                default:
+                    videoUrl = '';
+            }
+            document.getElementById('skillVideo').src = videoUrl;
+        }
+    </script>
+</body>
+</html>

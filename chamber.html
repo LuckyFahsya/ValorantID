@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>Chamber - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://tse4.mm.bing.net/th?id=OIP.Z7hDi8VR9Q-b1p-IGUIrVAHaDt&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Chamber - Sentinel</h1>
+        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/0f5b668b77499c0051201389d6ac5e7343c9727f-616x822.png?auto=format&fit=fill&q=80&w=415   " alt="Chamber" class="agent-image">
+        <p>Chamber adalah agen yang mengandalkan taktik dan kontrol. Dengan kemampuan uniknya, Chamber dapat mengatur posisi dan memberikan perlindungan bagi timnya.</p>
+
+        <h2>Kemampuan Chamber</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('HEADHUNTER')"><strong>HEADHUNTER:</strong> AKTIFKAN untuk menyiagakan pistol berat. TEMBAK ALT dengan pistol yang disiagakan untuk mengarahkan bidikan ke bawah.</li>
+            <li onclick="showVideo('RENDEZVOUS')"><strong>RENDEZVOUS:</strong> SIAGAKAN jangkar teleportasi. TEMBAK untuk menempatkannya di lantai. </li>
+            <li onclick="showVideo('TRADEMARK')"><strong>Skill 3:</strong> Ketika musuh yang terlihat masuk ke dalam jangkauan, jebakan akan menghitung mundur lalu membuat medan di sekitar mereka tidak stabil, menciptakan medan tahan lama yang menerapkan Slow ke pemain yang terperangkap di dalamnya. </li>
+            <li onclick="showVideo('TOUR DE FORCE')"><strong>TOUR DE FORCE:</strong> AKTIFKAN untuk memanggil senapan penembak runduk kustom dan kuat, yang akan membunuh musuh dengan tembakan langsung ke tubuh bagian atas.</li>
+        </ul>
+
+        <div class="video-container">
+            <iframe id="skillVideo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        function showVideo(skill) {
+            var videoUrl = '';
+            if (skill === 'HEADHUNTER') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/745571f61d83d880c42278a35a072cdd8b7bfa12.mp4';
+            } else if (skill === 'RENDEZVOUS') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/6d191f3734a8170d99f66642041da9f33240d319.mp4';
+            } else if (skill === 'TRADEMARK') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/245fa173c5d3677e3838d52fb155b6366d19c91b.mp4';
+            } else if (skill === 'TOUR DE FORCE') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/49f14376a65d54586c350e7fe863ba30911032a0.mp4';
+            }
+            document.getElementById('skillVideo').src = videoUrl;
+        }
+    </script>
+</body>
+</html>

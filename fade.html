@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk background dengan gambar transparan */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://tse2.mm.bing.net/th?id=OIP.DzzxWR_zcw0QVHPQUMbryQHaEK&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Tambahkan latar belakang semi-transparan untuk kontras */
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Fade - Initiator</h1>
+        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/e7099cc13a665ed2b556d514e50984393ed49967-616x822.png?auto=format&fit=fill&q=80&w=415" alt="Fade" class="agent-image">
+        <p>Fade adalah agen yang mengandalkan kemampuan untuk mengintimidasi dan mengendalikan musuh. Dengan kekuatan untuk mengungkap posisi musuh, Fade memberikan keuntungan strategis bagi timnya.</p>
+
+        <h2>Kemampuan Fade</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('SEIZE')"><strong>SEIZE:</strong> Siagakan orb tinta mimpi buruk. TEMBAK untuk melempar orb yang akan jatuh ke tanah setelah durasi waktu tertentu.  </li>
+            <li onclick="showVideo('HAUNT')"><strong>HAUNT:</strong> Siagakan entitas mimpi buruk. TEMBAK untuk melempar orb yang akan jatuh ke tanah setelah durasi waktu tertentu. </li>
+            <li onclick="showVideo('PROWLER')"><strong>PROWLER:</strong> SIAGAKAN Prowler. TEMBAK akan meluncurkan Prowler yang melaju dalam garis lurus. </li>
+            <li onclick="showVideo('NIGHTFALL')"><strong>NIGHTFALL:</strong> SIAGAKAN kekuatan ketakutan. TEMBAK untuk mengeluarkan gelombang energi mimpi buruk yang bisa menembus dinding. </li>
+        </ul>
+
+        <div class="video-container">
+            <iframe id="skillVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        // Fungsi untuk menampilkan video berdasarkan skill yang diklik
+        function showVideo(skill) {
+            var videoUrl = '';
+            
+            // Ganti URL video sesuai dengan skill yang dipilih
+            if (skill === 'SEIZE') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/ed5b27f8f8acf6420d5f0e30938e963a204cfeca.mp4';
+            } else if (skill === 'HAUNT') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/2ee3d74b1105ab3cd996821fb07e4d6aa5c77c1a.mp4';
+            } else if (skill === 'PROWLER') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/d401c0074081fd609fa08710174f27fc216c5b92.mp4';
+            } else if (skill === 'NIGHTFALL') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/fd638db2f5041f8bc09f311af2c460cec579edcd.mp4';
+            }
+
+            document.getElementById('skillVideo').src = videoUrl;
+        }
+    </script>
+</body>
+</html>

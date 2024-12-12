@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>ISO - Agen Valorant</title>
+ <link rel="stylesheet" href="style.css">
+ <style>
+  body {
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+   color: white;
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+      url('https://tse1.mm.bing.net/th?id=OIP.9cO5POkXiX0ZwtBMRg3obAHaEK&pid=Api&P=0&h=180');
+   background-size: cover;
+   background-position: center;
+  }
+
+  header nav ul {
+   display: flex;
+   list-style-type: none;
+   background-color: rgba(0, 0, 0, 0.8);
+   padding: 10px;
+  }
+
+  header nav ul li {
+   margin-right: 20px;
+  }
+
+  header nav ul li a {
+   text-decoration: none;
+   color: white;
+  }
+
+  .content {
+   padding: 20px;
+   text-align: center;
+   background-color: rgba(0, 0, 0, 0.5);
+   border-radius: 10px;
+   display: inline-block;
+  }
+
+  .video-container {
+   margin-top: 20px;
+  }
+
+  iframe {
+   width: 100%;
+   max-width: 560px;
+   height: 315px;
+   border-radius: 10px;
+  }
+
+  .skills-list li {
+   cursor: pointer;
+   padding: 10px;
+   margin-bottom: 5px;
+   background-color: #f1f1f1;
+   border-radius: 5px;
+   color: black;
+  }
+
+  .skills-list li:hover {
+   background-color: #ddd;
+  }
+ </style>
+</head>
+<body>
+ <header>
+  <nav>
+   <ul>
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="about.html">Tentang Kami</a></li>
+    <li><a href="events.html">Event Komunitas</a></li>
+    <li><a href="contact.html">Kontak</a></li>
+    <li><a href="agents.html">Agen Valorant</a></li>
+   </ul>
+  </nav>
+ </header>
+
+ <section class="content">
+  <h1>ISO - Duelist</h1>
+  <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/2c35cef9c38283f8478d1e808b1c129f371e50b3-616x822.png?auto=format&fit=fill&q=80&w=415" alt="ISO" class="agent-image">
+  <p>ISO adalah agen Duelist yang ahli dalam duel satu lawan satu. Dengan kemampuan uniknya, ISO dapat mengisolasi musuh dan memenangkan pertarungan dengan strategi yang cerdik.</p>
+
+  <h2>Kemampuan ISO</h2>
+  <ul class="skills-list">
+   <li onclick="showVideo('UNDERCUT')"><strong>KillNet:</strong> SIAGAKAN petir molekuler. Tembak untuk melemparnya ke depan, menerapkan FRAGILE sesaat ke semua pemain yang disentuhnya.</li>
+   <li onclick="showVideo('DOUBLE TAP')"><strong>Rebound:</strong> MULAI timer fokus. Setelah selesai, masuki kondisi fokus. Musuh yang kamu jatuhkan atau bunuh akan menghasilkan orb energi.</li>
+   <li onclick="showVideo('CONTINGENCY')"><strong>Bulwark:</strong> SIAGAKAN untuk merakit energi prismatik. TEMBAK untuk mendorong dinding energi yang tak bisa hancur untuk menghalangi peluru.</li>
+   <li onclick="showVideo('KILL CONTRACT')"><strong>Lockdown:</strong> SIAGAKAN arena interdimensi. TEMBAK untuk melemparkan selajur energi ke seluruh medan perang, menarikmu dan musuh pertama yang terkena ke dalam arena.</li>
+  </ul>
+
+  <div class="video-container">
+   <iframe id="skillVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+ </section>
+
+ <script>
+  function showVideo(skill) {
+   var videoUrl = '';
+   if (skill === 'UNDERCUT') {
+    videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/17503f71b58f654d583a66e29dab75460677576f.mp4';
+   } else if (skill === 'DOUBLE TAP') {
+    videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/11ad2731215ec978c89fdb675aaf3b591c3c3c55.mp4';
+   } else if (skill === 'CONTINGENCY') {
+    videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/5e331c774ffde4e8e0c45a8844b0237b7d75ba3b.mp4';
+   } else if (skill === 'KILL CONTRACT') {
+    videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/6fbd2b0e16ac3bda095094770ce6b1d403fc3832.mp4';
+   }
+   document.getElementById('skillVideo').src = videoUrl;
+  }
+ </script>
+
+</body>
+</html>

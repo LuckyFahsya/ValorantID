@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breach - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS untuk background dengan gambar transparan */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://tse3.mm.bing.net/th?id=OIP.g5aDOAaI-OhAkr7CiisjpgHaEK&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Tambahkan latar belakang semi-transparan untuk kontras */
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Breach - Initiator</h1>
+        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/e435c3378b7999a3338b408dbb5da8ba63f91150-616x822.png?auto=format&fit=fill&q=80&w=415" alt="Breach" class="agent-image">
+        <p>Breach adalah seorang initiator yang menggunakan ledakan untuk merobohkan pertahanan musuh dan membuka jalan bagi timnya.</p>
+
+        <h2>Kemampuan Breach</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('flashpoint')"><strong>Flashpoint:</strong> Menggunakan ledakan untuk membutakan musuh di area yang ditentukan.</li>
+            <li onclick="showVideo('faultline')"><strong>Fault Line:</strong> Mengirimkan gelombang kejut yang memperlambat dan menjatuhkan musuh di jalurnya.</li>
+            <li onclick="showVideo('aftershock')"><strong>Aftershock:</strong> Mengirimkan ledakan yang merusak musuh di area yang ditentukan.</li>
+            <li onclick="showVideo('ultimate')"><strong>Rolling Thunder:</strong> Menggunakan ledakan besar untuk merobohkan musuh di area yang luas.</li>
+        </ul>
+
+        <div class="video-container">
+            <iframe id="skillVideo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        function showVideo(skill) {
+            var videoUrl = '';
+            
+            if (skill === 'flashpoint') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/ffa4695b83e2f959bc59f0393dfc74e533546a89.mp4';
+            } else if (skill === 'fault line') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/a4f24e1fe60879234be5da0f8a768feb8f379fdd.mp4';
+            } else if (skill === 'aftershock') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/592212ab60d09999d493c2099f9260d59fab917a.mp4';
+            } else if (skill === 'ultimate') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/207b0ab21f8e27e98ca22f4b5546cc0963d94af6.mp4';
+            }
+
+            document.getElementById('skillVideo').src = videoUrl;
+        }
+    </script>
+</body>
+</html>

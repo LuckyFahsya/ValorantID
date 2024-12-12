@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyse - Agen Valorant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://tse4.mm.bing.net/th?id=OIP.IJloU5bMQ4RWnhzE9EUfvAHaEK&pid=Api&P=0&h=180');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .skills-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .skills-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="events.html">Event Komunitas</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="agents.html">Agen Valorant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Vyse - Duelist</h1>
+        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/370e4b820670ef0bac7e685f6e8c5e64d19f1890-587x900.png?auto=format&fit=fill&q=80&w=415" alt="Vyse" class="agent-image">
+        <p>Vyse adalah agen yang mengandalkan kecepatan dan ketepatan. Dengan kemampuan uniknya, Vyse dapat mengelabui musuh dan memberikan keuntungan strategis bagi timnya.</p>
+
+        <h2>Kemampuan Vyse</h2>
+        <ul class="skills-list">
+            <li onclick="showVideo('Shear')"><strong>Shear:</strong> Saat musuh melintas, dinding yang tidak bisa hancur akan muncul dari dalam tanah di belakang mereka .</li>
+            <li onclick="showVideo('skill2')"><strong>skill2:</strong> Deskripsi kemampuan 2.</li>
+            <li onclick="showVideo('Razorvine')"><strong>Razorvine</strong> ini akan menyebar menjadi sarang razorvine besar yang menerapkan utilitas slow dan damage pada semua pemain yang melewatinya.</li>
+            <li onclick="showVideo('Steel Garden')"><strong>Steel Garden:</strong>  mengeluarkan logam yang menyembur dari Vyse sebagai semburan duri logam. Kemudian, JAMMING senjata utama musuh setelah windup singkat.</li>
+        </ul>
+
+        <div class="video-container">
+            <iframe id="skillVideo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <script>
+        function showVideo(skill) {
+            var videoUrl = '';
+            if (skill === 'Shear') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/bacb07fdf5b13efeab5e24168f8e244257c1d0cb.mp4';
+            } else if (skill === 'skill2') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/5cefca2b93f097285ce2cb4f20fec7184b555218.mp4';
+            } else if (skill === 'Razorvine') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/84154b3401b08acad60d739616017a4fcd86710a.mp4';
+            } else if (skill === 'Steel Garden') {
+                videoUrl = 'https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/f9d32afb39a3260b915ea6ef441054c904a69e91.mp4';
+            }
+            document.getElementById('skillVideo').src = videoUrl;
+        }
+    </script>
+</body>
+</html>
